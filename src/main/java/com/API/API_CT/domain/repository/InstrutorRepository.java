@@ -1,4 +1,4 @@
-package com.API.API_CT.domain.model.repository;
+package com.API.API_CT.domain.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
