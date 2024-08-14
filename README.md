@@ -88,3 +88,22 @@ classDiagram
     Aula  -->  Modalidade : utiliza
     Instrutor  -->  Aula : designado
 ```
+
+<h2>Configuração das entidades</h2>
+ O próximo passo foi criar o pacote 'domain' com o pacote 'model' para os modelos das entidades:
+ 
+ ![alt text](image-1.png)
+
+ <h2>Criação dos repositórios</h2>
+  Dentro do nosso pacote 'Domain' criei o pacote 'repository' com as configurações de armazenamento para cada entidade.
+
+![alt text](image-2.png)
+
+Em seguida configurar o banco de dados no 'application.properties'.
+
+![alt text](image-3.png)
+
+Feito isso, pude rodar a aplicação e ver se as tabelas foram criadas no banco de dados h2.
+ Acessando a url (http://localhost:8080/h2-console) podemos vizualizar as tabelas:
+
+![alt text](image-4.png)
