@@ -107,3 +107,19 @@ Feito isso, pude rodar a aplicação e ver se as tabelas foram criadas no banco 
  Acessando a url (http://localhost:8080/h2-console) podemos vizualizar as tabelas:
 
 ![alt text](image-4.png)
+
+<h2>Criação dos Serviços</h2>
+ Serviços para encapsular a lógica de negócio e interagir com os repositórios:
+   No pacote 'Service' crio as interfaces publicas de cada entidade:
+
+   ![alt text](image-5.png)
+
+  Ainda dentro da pasta, cria uma sub-pasta 'impl' que terá as implementações para cada interface de serviço: 
+
+  ![alt text](image-6.png)
+
+   - *Para que uma sub-pasta com implementações?* :
+    
+    - Organização: Separar as implementações das interfaces ajuda a manter o código organizado.
+    - Modularidade: Facilita a troca de implementações se necessário, como por exemplo, criar uma nova versão de um serviço sem impactar o resto do código.
+    - Manutenibilidade: Torna o projeto mais fácil de manter, especialmente em projetos maiores com muitas classes de serviço.
