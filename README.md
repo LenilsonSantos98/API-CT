@@ -123,3 +123,13 @@ Feito isso, pude rodar a aplicação e ver se as tabelas foram criadas no banco 
     - Organização: Separar as implementações das interfaces ajuda a manter o código organizado.
     - Modularidade: Facilita a troca de implementações se necessário, como por exemplo, criar uma nova versão de um serviço sem impactar o resto do código.
     - Manutenibilidade: Torna o projeto mais fácil de manter, especialmente em projetos maiores com muitas classes de serviço.
+
+
+  <h2>Controllers </h2>
+
+Criei a camada de controle, com os controladores REST para expor os endpoints da API. 
+![alt text](image-7.png)
+
+Com o controller criado, posso usar o Swagger para ver minha API documentada sem a necessidade de um Front-End: 
+![alt text](image-8.png)
+Ficou possivel observar os metodos: buscar, criar, deletar e atualizar. 
