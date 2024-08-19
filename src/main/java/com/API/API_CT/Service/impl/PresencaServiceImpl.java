@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 import com.API.API_CT.Service.PresencaService;
@@ -11,9 +12,19 @@ import com.API.API_CT.domain.model.Presenca;
 import com.API.API_CT.domain.repository.PresencaReporitory;
 
 @Service
-public class PresencaServiceImpl implements PresencaService {
+public class PresencaServiceImpl extends BaseServiceImpl<Presenca, Long> implements PresencaService {
     @Autowired
     private  PresencaReporitory presencaRepository;
+
+    public PresencaServiceImpl(JpaRepository<Presenca, Long> repository) {
+        super(repository);
+    }
+
+    @Override
+    public Presenca atualizar(Long id, Presenca entity) {
+        // Implementar lógica de atualização específica para Aluno.
+        return super.atualizar(id, entity);
+    }
 
     @Override
     public Optional<Presenca> buscarPorId(Long id) {

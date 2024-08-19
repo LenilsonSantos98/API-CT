@@ -133,3 +133,23 @@ Criei a camada de controle, com os controladores REST para expor os endpoints da
 Com o controller criado, posso usar o Swagger para ver minha API documentada sem a necessidade de um Front-End: 
 ![alt text](image-8.png)
 Ficou possivel observar os metodos: buscar, criar, deletar e atualizar. 
+
+- Para evitar repetir todo o código em cada controller,  eu crio 
+uma classe genérica `BaseController.java`, que tera os metódos em comum:
+![alt text](image-9.png)
+
+- Em seguida crio uma interface base de serviço que declare os métodos que serão utilizados pelo controlador: 
+![alt text](image-10.png)
+
+- Implementar o srviço base em um serviço genérico que pode ser estendido pelos serviços específicos:
+
+![alt text](image-11.png)
+
+- Estender a Classe Base em Controladores Específicos:
+![alt text](image-12.png)
+
+- Estender a Classe Base em Serviços Específicos, vamos estender a implementação base em serviços específicos para cada uma das entidades:
+![alt text](image-13.png)
+
+Após esses passos, é possivel verificar no swagger todas as entidades: 
+![alt text](image-14.png)
